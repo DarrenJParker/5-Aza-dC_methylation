@@ -13,6 +13,12 @@ This is the repository for the collected scripts used in the study *"5-aza-2’-
 * Refseq_ids **Nvit_OGSv1.2_official_id_map.txt** 
     * available from http://hymenopteragenome.org/nasonia/nasonia_genome_consortium/data/Nvit_OGSv1.2_official_id_map.txt
 
+* GO-terms files from 
+
+    * **Data/Nvit_1.2_GOs_from_hymenopteramine_270918.tsv** - GO-terms for *N. vitripennis*
+    * **Data/Drosp_GOs_from_hymenopteramine_for_Nvit_1.2_orths_270918.tsv** - GO-terms for *D. melanogaster* orthologs
+    * **Data/Gene_Orthologues_for_Nvit_1.2_from_hymenopteramine_270918.tsv** - Table for converting between *N. vitripennis* and *D. melanogaster* orthologs
+
 
 ## Locus-level analysis
 
