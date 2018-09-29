@@ -6,7 +6,7 @@ This is the repository for the collected scripts used in the study *"5-aza-2’-
 
 * The locus (CpG) level file **all_methylKit_fix.csv**, contains the number of methylated and unmethylated reads per locus, can be obtained from `https://www.dropbox.com/s/s3f0amznm4tptzt/all_methylKit_fix.csv?dl=0` (Dropbox link for now, will put into long term storage later). Once downloaded please place this file into the `Data` directory. 
 
-* Gene annotation file **all_methylKit_fix_gene_closestgene_exon_CDS_5UTR_3UTR_annot.txt**, contains gene information for each locus in the experiment. 
+* Gene annotation file **all_methylKit_fix_gene_closestgene_exon_CDS_5UTR_3UTR_annot.txt**, contains gene information for each locus in the experiment, can be obtained from `https://www.dropbox.com/s/0jvxcnrux10zgoe/all_methylKit_fix_gene_closestgene_exon_CDS_5UTR_3UTR_annot.txt?dl=0` (Dropbox link for now, will put into long term storage later).
 
 * Sample ID to sample infomation table **BSseq_sample_info.csv**
 
