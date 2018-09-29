@@ -81,9 +81,6 @@ python3 hymenopteramine_GOs_to_topGO.py \
 
 * Then perform enrichment anaylses with `TopGO.R`
 
-## Additional scripts
-
-
 ## Infomation on running scripts
 
 * All scripts should be run from the directory they are in. Output directories will be created to store output as the code is run. 
