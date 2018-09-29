@@ -13,7 +13,7 @@ This is the repository for the collected scripts used in the study *"5-aza-2’-
 * Refseq_ids **Nvit_OGSv1.2_official_id_map.txt** 
     * available from http://hymenopteragenome.org/nasonia/nasonia_genome_consortium/data/Nvit_OGSv1.2_official_id_map.txt
 
-* GO-terms files from 
+* GO-terms files from http://hymenopteragenome.org
 
     * **Data/Nvit_1.2_GOs_from_hymenopteramine_270918.tsv** - GO-terms for *N. vitripennis*
     * **Data/Drosp_GOs_from_hymenopteramine_for_Nvit_1.2_orths_270918.tsv** - GO-terms for *D. melanogaster* orthologs
@@ -68,7 +68,16 @@ python3 add_NB_gene_info.py -t ./Data/Nvit_OGSv1.2_official_id_map.txt -i all_me
 * Filter glm and correct for multiple tests with `BSseq_analysis_of_glm_gene_level.R`
 
 
-### GO-term analysis
+## GO-term analysis
+
+* First convert hymenopteragenome files for use in TopGO:
+```
+python3 hymenopteramine_GOs_to_topGO.py \
+-g ./Data/Nvit_1.2_GOs_from_hymenopteramine_270918.tsv \
+-l ./Data/Nasonia_vitripennis.Nvit_2.1_genenames.txt \
+-d ./Data/Drosp_GOs_from_hymenopteramine_for_Nvit_1.2_orths_270918.tsv \
+-o ./Data/Gene_Orthologues_for_Nvit_1.2_from_hymenopteramine_270918.tsv
+```
 
 
 
