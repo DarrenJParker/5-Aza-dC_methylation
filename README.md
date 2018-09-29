@@ -70,7 +70,7 @@ python3 add_NB_gene_info.py -t ./Data/Nvit_OGSv1.2_official_id_map.txt -i all_me
 
 ## GO-term analysis
 
-* First convert hymenopteragenome files for use in TopGO:
+* First convert hymenoptera mine files for use in TopGO:
 ```
 python3 hymenopteramine_GOs_to_topGO.py \
 -g ./Data/Nvit_1.2_GOs_from_hymenopteramine_270918.tsv \
