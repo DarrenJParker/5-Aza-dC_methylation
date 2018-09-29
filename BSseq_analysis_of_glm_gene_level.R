@@ -76,7 +76,7 @@ write.csv(dat2, "all_methylKit_fix_gene_level_glm_tidied_with_locID_FDR_correcte
 
 dat2_sig_treat      <- subset(dat2, dat2$FDR_treat < 0.05)
 dat2_sig_collection <- subset(dat2, dat2$FDR_collection < 0.05)
-dat2_sig_tiss_type  <- subset(dat2, dat2$tiss_type < 0.05)
+dat2_sig_tiss_type  <- subset(dat2, dat2$FDR_tiss_type < 0.05)
 
 
 ### treatment
