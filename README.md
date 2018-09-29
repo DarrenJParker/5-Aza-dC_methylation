@@ -10,6 +10,10 @@ This is the repository for the collected scripts used in the study *"5-aza-2’-
 
 * Sample ID to sample infomation table **BSseq_sample_info.csv**
 
+* Refseq_ids **Nvit_OGSv1.2_official_id_map.txt** 
+    * available from http://hymenopteragenome.org/nasonia/nasonia_genome_consortium/data/Nvit_OGSv1.2_official_id_map.txt
+
+
 ## Locus-level analysis
 
 ### PCA and t-SNE
@@ -35,6 +39,33 @@ This is the repository for the collected scripts used in the study *"5-aza-2’-
 * Then run `BS_PCA_MDS_tsne_gene_level.R`
 
 ### GLM
+
+* Firstly need to prepare file for R (one per gene):
+`python3 all_methylKit_fix_prepforglm.py -i  all_methylKit_fix_gene_level.csv -s ./Data/BSseq_sample_info.csv -o all_methylKit_fix_gene_level`
+
+* Then run a glm on each gene using BSseq_binomial_glm.R in a loop. Here I used a simple bash loop:
+
+```
+for i in ./single_files_for_Rglm/*.csv; do
+	echo $i
+	Rscript BSseq_binomial_glm.R $i
+done
+```
+
+* then stick output together and add refseq_ids.
+
+```
+python3 BSseq_binomial_glm_tidier.py -d ./single_files_for_Rglm/ -o all_methylKit_fix_gene_level
+python3 add_NB_gene_info.py -t ./Data/Nvit_OGSv1.2_official_id_map.txt -i all_methylKit_fix_gene_level_glm_tidied.csv
+```
+
+* Filter glm and correct for multiple tests with `BSseq_analysis_of_glm_gene_level.R`
+
+
+### GO-term analysis
+
+
+
 
 
 ### Additional scripts
