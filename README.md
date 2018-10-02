@@ -20,31 +20,30 @@ This is the repository for the collected scripts used in the study *"5-aza-2’-
     * **Data/Gene_Orthologues_for_Nvit_1.2_from_hymenopteramine_270918.tsv** - Table for converting between *N. vitripennis* and *D. melanogaster* orthologs
 
 
-## Locus-level analysis
+## PCA and t-SNE
 
-### PCA and t-SNE
-
-* First calculate the proportion of reads that are methylated for each locus and each sample:
-
-`python3 all_methylKit_fix_tidier.py -i ./Data/all_methylKit_fix.csv -o all_methylKit_fix`
-
-* Then run `BS_PCA_MDS_tsne.R`
-
-## Gene-level analysis
+**Gene Level** 
 
 * First sum locus counts to gene-level counts:
 
 `python3 all_methylKit_fix_sumlocibygene.py -a ./Data/all_methylKit_fix_gene_closestgene_exon_CDS_5UTR_3UTR_annot.txt -i ./Data/all_methylKit_fix.csv -o all_methylKit_fix -d 1000`
 
-### PCA and t-SNE
-
-* First calculate the proportion of reads that are methylated for each gene and each sample:
+* Calculate the proportion of reads that are methylated for each gene and each sample:
 
 `python3 all_methylKit_fix_tidier.py -i all_methylKit_fix_gene_level.csv -o all_methylKit_fix_gene_level`
 
 * Then run `BS_PCA_MDS_tsne_gene_level.R`
 
-### GLM
+**Locus-level**
+
+* Calculate the proportion of reads that are methylated for each locus and each sample:
+
+`python3 all_methylKit_fix_tidier.py -i ./Data/all_methylKit_fix.csv -o all_methylKit_fix`
+
+* Then run `BS_PCA_MDS_tsne.R`
+
+
+## GLMs
 
 * Firstly need to prepare file for R (one per gene):
 `python3 all_methylKit_fix_prepforglm.py -i  all_methylKit_fix_gene_level.csv -s ./Data/BSseq_sample_info.csv -o all_methylKit_fix_gene_level`
