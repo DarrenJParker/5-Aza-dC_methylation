@@ -173,7 +173,7 @@ for line in in_file:
 			
 			try:
 				meth_c   = int(vals[0])
-				unmeth_c = int(vals[1])
+				unmeth_c = int(vals[1]) - meth_c 
 			except:
 				print("Not all count values are integer - exiting!")
 				sys.exit(2)
@@ -251,7 +251,7 @@ if filt_stat == "YES":
 				vals = line[i].split("/")
 				try:
 					meth_c   = int(vals[0])
-					unmeth_c = int(vals[1])
+					unmeth_c = int(vals[1]) - meth_c 
 				except:
 					print("Not all count values are integer - exiting!")
 					sys.exit(2)
@@ -328,7 +328,7 @@ if filt_stat == "YES":
 					
 					try:
 						meth_c   = int(vals[0])
-						unmeth_c = int(vals[1])
+						unmeth_c = int(vals[1]) - meth_c 
 					except:
 						print("Not all count values are integer - exiting!")
 						sys.exit(2)

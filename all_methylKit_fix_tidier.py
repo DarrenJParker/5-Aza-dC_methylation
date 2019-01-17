@@ -99,9 +99,9 @@ for line in in_file:
 			
 			try:
 				meth_cTEST = int(vals[0])
-				unmeth_cTEST = int(vals[1])
+				total_cTEST = int(vals[1])
 				meth_cd = decimal.Decimal(vals[0])
-				unmeth_cd = decimal.Decimal(vals[1])
+				total_cd = decimal.Decimal(vals[1])
 			except:
 				print("Not all count values are integer - exiting!")
 				sys.exit(2)
@@ -111,14 +111,14 @@ for line in in_file:
 			
 			meth_prop = decimal.Decimal(-50000.777)
 			
-			if meth_cd + unmeth_cd == 0:
+			if total_cd == 0:
 				meth_prop = "NA"
 				sites_with_0_cov = sites_with_0_cov + 1
-			elif meth_cd + unmeth_cd < int(min_coverage):
+			elif total_cd < int(min_coverage):
 				meth_prop = "NA"
 				sites_below_cov_thresh = sites_below_cov_thresh + 1				
 			else:
-				meth_prop = decimal.Decimal(meth_cd/(meth_cd + unmeth_cd))
+				meth_prop = decimal.Decimal(meth_cd/(total_cd))
 			
 			meth_props_all = meth_props_all + "," + str(meth_prop)
 		

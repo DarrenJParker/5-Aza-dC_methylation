@@ -141,13 +141,13 @@ for line in in_file:
 				
 				try:
 					meth_c   = int(vals[0])
-					unmeth_c = int(vals[1])
+					total_c = int(vals[1])
 				except:
 					print("Not all count values are integer - exiting!")
 					sys.exit(2)
 				
 				new_line.append(meth_c)
-				new_line.append(unmeth_c)
+				new_line.append(total_c)
 			SNP_dict[locus_name] = new_line
 
 in_file.close()
@@ -166,7 +166,7 @@ if cov_filt != None:
 			#print(count_list)
 			
 			for i in range(0,len(count_list),2):
-				SNP_cov = count_list[i] + count_list[i+1]
+				SNP_cov = count_list[i+1]
 				#print(SNP_cov)
 				if SNP_cov < cov_filt:
 					SNPs_with_too_low_cov.add(s)
