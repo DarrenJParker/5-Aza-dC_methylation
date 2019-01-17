@@ -23,7 +23,7 @@ This is the repository for the collected scripts used in the study *"5-aza-2’-
 
 ### DATA - expected output
 
-*
+* **./Data/expected_output/all_methylKit_fix_gene_level_glm_tidied_with_locID_with_posinfo.csv**. Expected output file for the gene level analyses (see below), provided for convenience. 
 
 ## PCA and t-SNE
 
