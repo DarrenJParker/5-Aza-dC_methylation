@@ -2,7 +2,7 @@
 
 library(ggplot2)
 library(Rtsne)
-library(tidyr
+library(tidyr)
 library(ggplot2)
 library(cowplot)
 
