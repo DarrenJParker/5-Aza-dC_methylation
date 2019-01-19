@@ -163,17 +163,25 @@ getwd() ## where has my plot gone....?
 #############################################################################################
 # plot along chromosome
 
+treat_df <- as.data.frame(cbind(
+c(dat2$treat5aza_dC_24h,dat2$treat5aza_dC_48h),
+c(as.character(dat2$gene_name),as.character(dat2$gene_name)),
+c(rep("treat5aza_dC_24h", length(dat2$treat5aza_dC_24h)), rep("treat5aza_dC_48h", length(dat2$treat5aza_dC_48h))),
+c(dat2$chrID,dat2$chrID),
+c(dat2$pos,dat2$pos)
+))
+
+head(treat_df )
+colnames(treat_df) <- c("coeff", "gene_name", "treat", "chrID", "pos")
+treat_df$coeff <-  as.numeric(as.character(treat_df$coeff))
+treat_df$pos <-  as.numeric(as.character(treat_df$pos))
+str(treat_df)
+
 treat_df_chr1 <- subset(treat_df, treat_df$chrID == "1")
 treat_df_chr2 <- subset(treat_df, treat_df$chrID == "2")
 treat_df_chr3 <- subset(treat_df, treat_df$chrID == "3")
 treat_df_chr4 <- subset(treat_df, treat_df$chrID == "4")
 treat_df_chr5 <- subset(treat_df, treat_df$chrID == "5")
-
-treat_df_sig_treat_chr1 <- subset(treat_df_sig_treat, treat_df_sig_treat$chrID == "1")
-treat_df_sig_treat_chr2 <- subset(treat_df_sig_treat, treat_df_sig_treat$chrID == "2")
-treat_df_sig_treat_chr3 <- subset(treat_df_sig_treat, treat_df_sig_treat$chrID == "3")
-treat_df_sig_treat_chr4 <- subset(treat_df_sig_treat, treat_df_sig_treat$chrID == "4")
-treat_df_sig_treat_chr5 <- subset(treat_df_sig_treat, treat_df_sig_treat$chrID == "5")
 
 head(treat_df)
 head(treat_df_chr1)
