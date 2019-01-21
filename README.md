@@ -8,7 +8,7 @@ This is the repository for the collected scripts used in the study *"5-aza-2’-
 
 * gff file **Nasonia_vitripennis.Nvit_2.1.40.gff3**, obtained from ensembl `ftp://ftp.ensemblgenomes.org/pub/release-40/metazoa/gff3/nasonia_vitripennis/Nasonia_vitripennis.Nvit_2.1.40.gff3.gz`. Once downloaded please unzip and place this file into the `Data` directory.
 
-* Gene annotation file **all_methylKit_fix_gene_closestgene_exon_CDS_5UTR_3UTR_annot.txt**, contains gene information for each locus in the experiment, can be obtained from `https://www.dropbox.com/s/0jvxcnrux10zgoe/all_methylKit_fix_gene_closestgene_exon_CDS_5UTR_3UTR_annot.txt?dl=0` (Dropbox link for now, will put into an archive (e.g. Dryad)). Once downloaded please place this file into the `Data` directory. 
+* The processed gene annotation file **all_methylKit_fix_gene_closestgene_exon_CDS_5UTR_3UTR_annot.txt**, contains gene information for each locus in the experiment. Needs to be unzipped before it can be used. 
 
 * Sample ID to sample infomation table **BSseq_sample_info.csv**
 
