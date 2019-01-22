@@ -7,6 +7,8 @@ currently under review.
 
 ## DATA
 
+In the `Data` directory:
+
 * The locus (CpG) level file  **GSE125388_PropMethDataAllSamples.csv.gz** **all_methylKit_fix.csv**, contains the number of methylated and unmethylated reads per locus, can be obtained from [GEO (accession number: GSE125388)](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE125388&format=file&file=GSE125388%5FPropMethDataAllSamples%2Ecsv%2Egz). Once downloaded please unzip this file and place into the `Data` directory. 
 
 * gff file **Nasonia_vitripennis.Nvit_2.1.40.gff3**, obtained from [ensembl](ftp://ftp.ensemblgenomes.org/pub/release-40/metazoa/gff3/nasonia_vitripennis/Nasonia_vitripennis.Nvit_2.1.40.gff3.gz). Once downloaded please unzip and place this file into the `Data` directory.
@@ -20,13 +22,15 @@ currently under review.
 
 * GO-terms files from http://hymenopteragenome.org
 
-    * **Data/Nvit_1.2_GOs_from_hymenopteramine_270918.tsv** - GO-terms for *N. vitripennis*
-    * **Data/Drosp_GOs_from_hymenopteramine_for_Nvit_1.2_orths_270918.tsv** - GO-terms for *D. melanogaster* orthologs
-    * **Data/Gene_Orthologues_for_Nvit_1.2_from_hymenopteramine_270918.tsv** - Table for converting between *N. vitripennis* and *D. melanogaster* orthologs
+    * **Nvit_1.2_GOs_from_hymenopteramine_270918.tsv** - GO-terms for *N. vitripennis*
+    * **Drosp_GOs_from_hymenopteramine_for_Nvit_1.2_orths_270918.tsv** - GO-terms for *D. melanogaster* orthologs
+    * **Gene_Orthologues_for_Nvit_1.2_from_hymenopteramine_270918.tsv** - Table for converting between *N. vitripennis* and *D. melanogaster* orthologs
 
 ### DATA - expected output
 
-* **./Data/expected_output/all_methylKit_fix_gene_level_glm_tidied_with_locID_with_posinfo.csv**. Expected output file for the gene level analyses (see below), provided for convenience. 
+In the `Data/expected_output` directory:
+
+* **all_methylKit_fix_gene_level_glm_tidied_with_locID_with_posinfo.csv**. Expected output file for the gene level analyses (see below), provided for convenience. 
 
 ## PCA and t-SNE
 
@@ -95,5 +99,6 @@ python3 hymenopteramine_GOs_to_topGO.py \
 
 * All scripts should be run from the directory they are in. Output directories will be created to store output as the code is run. 
 * All python scripts were made using python 3.5. All contain help information which can be displayed by specifying `python [name of script] -h`
+
 
 
