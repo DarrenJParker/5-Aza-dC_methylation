@@ -11,7 +11,7 @@ In the `Data` directory:
 
 * The locus (CpG) level file  **GSE125388_PropMethDataAllSamples.csv.gz** **all_methylKit_fix.csv**, contains the number of methylated and unmethylated reads per locus, can be obtained from [GEO (accession number: GSE125388)](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE125388&format=file&file=GSE125388%5FPropMethDataAllSamples%2Ecsv%2Egz). Once downloaded please unzip this file and place into the `Data` directory. 
 
-* gff file **Nasonia_vitripennis.Nvit_2.1.40.gff3**, obtained from [ensembl](ftp://ftp.ensemblgenomes.org/pub/release-40/metazoa/gff3/nasonia_vitripennis/Nasonia_vitripennis.Nvit_2.1.40.gff3.gz). Once downloaded please unzip and place this file into the `Data` directory.
+* gff file **Nasonia_vitripennis.Nvit_2.1.40.gff3**, obtained from ensembl: `ftp://ftp.ensemblgenomes.org/pub/release-40/metazoa/gff3/nasonia_vitripennis/Nasonia_vitripennis.Nvit_2.1.40.gff3.gz`. Once downloaded please unzip and place this file into the `Data` directory.
 
 * The processed gene annotation file **all_methylKit_fix_gene_closestgene_exon_CDS_5UTR_3UTR_annot.txt**, contains gene information for each locus in the experiment. Needs to be unzipped before it can be used. 
 
