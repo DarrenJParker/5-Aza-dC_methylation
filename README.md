@@ -103,7 +103,7 @@ python3 hymenopteramine_GOs_to_topGO.py \
 -o ./Data/Gene_Orthologues_for_Nvit_1.2_from_hymenopteramine_270918.tsv
 ```
 
-* Then perform enrichment anaylses with `TopGO.R`
+* Then perform enrichment analyses with `TopGO.R`
 
 ## Infomation on running scripts
 
