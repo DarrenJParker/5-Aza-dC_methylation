@@ -4,7 +4,7 @@ This is the repository for the collected scripts used in the study *"5-aza-2’-
 
 ## DATA
 
-* The locus (CpG) level file **all_methylKit_fix.csv**, contains the number of methylated and unmethylated reads per locus, can be obtained from `https://www.dropbox.com/s/s3f0amznm4tptzt/all_methylKit_fix.csv?dl=0` (Dropbox link for now, will put into an archive (e.g. Dryad) later). Once downloaded please place this file into the `Data` directory. 
+* The locus (CpG) level file  **GSE125388_PropMethDataAllSamples.csv.gz** **all_methylKit_fix.csv**, contains the number of methylated and unmethylated reads per locus, can be obtained from [GEO (accession number: GSE125388)](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE125388&format=file&file=GSE125388%5FPropMethDataAllSamples%2Ecsv%2Egz). Once downloaded please place this file into the `Data` directory. 
 
 * gff file **Nasonia_vitripennis.Nvit_2.1.40.gff3**, obtained from ensembl `ftp://ftp.ensemblgenomes.org/pub/release-40/metazoa/gff3/nasonia_vitripennis/Nasonia_vitripennis.Nvit_2.1.40.gff3.gz`. Once downloaded please unzip and place this file into the `Data` directory.
 
@@ -31,7 +31,7 @@ This is the repository for the collected scripts used in the study *"5-aza-2’-
 
 * First sum locus counts to gene-level counts:
 
-`python3 all_methylKit_fix_sumlocibygene.py -a ./Data/all_methylKit_fix_gene_closestgene_exon_CDS_5UTR_3UTR_annot.txt -i ./Data/all_methylKit_fix.csv -o all_methylKit_fix -d 1000`
+`python3 all_methylKit_fix_sumlocibygene.py -a ./Data/all_methylKit_fix_gene_closestgene_exon_CDS_5UTR_3UTR_annot.txt -i ./Data/GSE125388_PropMethDataAllSamples.csv -o all_methylKit_fix -d 1000`
 
 * Calculate the proportion of reads that are methylated for each gene and each sample:
 
@@ -43,7 +43,7 @@ This is the repository for the collected scripts used in the study *"5-aza-2’-
 
 * Calculate the proportion of reads that are methylated for each locus and each sample:
 
-`python3 all_methylKit_fix_tidier.py -i ./Data/all_methylKit_fix.csv -o all_methylKit_fix`
+`python3 all_methylKit_fix_tidier.py -i ./Data/GSE125388_PropMethDataAllSamples.csv -o all_methylKit_fix`
 
 * Then run `BS_PCA_MDS_tsne.R`
 
