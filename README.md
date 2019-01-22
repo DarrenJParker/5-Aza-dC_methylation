@@ -38,11 +38,15 @@ In the `Data/expected_output` directory:
 
 * First sum locus counts to gene-level counts:
 
-`python3 all_methylKit_fix_sumlocibygene.py -a ./Data/all_methylKit_fix_gene_closestgene_exon_CDS_5UTR_3UTR_annot.txt -i ./Data/GSE125388_PropMethDataAllSamples.csv -o all_methylKit_fix -d 1000`
+```
+python3 all_methylKit_fix_sumlocibygene.py -a ./Data/all_methylKit_fix_gene_closestgene_exon_CDS_5UTR_3UTR_annot.txt -i ./Data/GSE125388_PropMethDataAllSamples.csv -o all_methylKit_fix -d 1000
+```
 
 * Calculate the proportion of reads that are methylated for each gene and each sample:
 
-`python3 all_methylKit_fix_tidier.py -i all_methylKit_fix_gene_level.csv -o all_methylKit_fix_gene_level`
+```
+python3 all_methylKit_fix_tidier.py -i all_methylKit_fix_gene_level.csv -o all_methylKit_fix_gene_level
+```
 
 * Then run `BS_PCA_MDS_tsne_gene_level.R`
 
@@ -50,7 +54,9 @@ In the `Data/expected_output` directory:
 
 * Calculate the proportion of reads that are methylated for each locus and each sample:
 
-`python3 all_methylKit_fix_tidier.py -i ./Data/GSE125388_PropMethDataAllSamples.csv -o all_methylKit_fix`
+```
+python3 all_methylKit_fix_tidier.py -i ./Data/GSE125388_PropMethDataAllSamples.csv -o all_methylKit_fix
+```
 
 * Then run `BS_PCA_MDS_tsne.R`
 
@@ -58,7 +64,10 @@ In the `Data/expected_output` directory:
 ## GLMs
 
 * Firstly need to prepare file for R (one per gene):
-`python3 all_methylKit_fix_prepforglm.py -i  all_methylKit_fix_gene_level.csv -s ./Data/BSseq_sample_info.csv -o all_methylKit_fix_gene_level`
+
+```
+python3 all_methylKit_fix_prepforglm.py -i  all_methylKit_fix_gene_level.csv -s ./Data/BSseq_sample_info.csv -o all_methylKit_fix_gene_level
+```
 
 * Then run a glm on each gene using BSseq_binomial_glm.R in a loop. Here I used a simple bash loop:
 
@@ -85,6 +94,7 @@ python3 add_location_gene_info.py -g ./Data/Nasonia_vitripennis.Nvit_2.1.40_gene
 ## GO-term analysis
 
 * First convert hymenoptera mine files for use in TopGO:
+
 ```
 python3 hymenopteramine_GOs_to_topGO.py \
 -g ./Data/Nvit_1.2_GOs_from_hymenopteramine_270918.tsv \
