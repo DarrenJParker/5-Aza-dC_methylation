@@ -1,7 +1,7 @@
 # 5-Aza-dC_methylation
 
 This is the repository for the collected scripts used in the study:
->Cook, N*., Parker, D. J*., Turner, F., Tauber, E., Pannebakker, B. A., Shuker, D. M. 2018. [Genome-wide disruption of DNA methylation by 5-aza-2’-deoxycytidine in the parasitoid wasp Nasonia vitripennis](https://www.biorxiv.org/content/early/2018/10/09/437202). bioRxiv. doi: https://doi.org/10.1101/437202
+>Cook, N*., Parker, D. J*., Turner, F., Tauber, E., Pannebakker, B. A., Shuker, D. M. 2018. [Genome-wide disruption of DNA methylation by 5-aza-2’-deoxycytidine in the parasitoid wasp Nasonia vitripennis](https://www.biorxiv.org/content/early/2018/10/09/437202). bioRxiv.
 
 currently under review.
 
